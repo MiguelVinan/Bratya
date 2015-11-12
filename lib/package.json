@@ -1,0 +1,22 @@
+{
+  "name": "lib",
+  "version": "0.0.1",
+  "description": "sources for theme bae in wordpress",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miguel Viñan H.",
+  "license": "MIT",
+  "dependencies": {
+    "clean-css": "^3.4.5",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "vinyl-map": "^1.0.1"
+  }
+}
