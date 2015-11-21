@@ -1,3 +1,20 @@
 .Info
-  height: 100vh
-  widht: 100%
+  position: relative
+  height: 800px
+  width: 100%
+  overflow: hidden
+
+  .leftHand,
+  .rightHand
+    position: absolute
+  .rightHand
+    bottom: 0
+    right: -200px
+  .leftHand
+    top: 0
+    left: -200px
+
+  &-description
+    margin-bottom: $margin_space_bold
+    h2
+      margin-bottom: $margin_space_regular

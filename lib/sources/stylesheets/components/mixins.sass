@@ -1,0 +1,61 @@
+
+
+/*
+ * Media Queries
+ */
+
+=tablet
+  @media (min-width: #{$tablet-width})
+    @content
+
+=desktop
+  @media (min-width: #{$desktop-width})
+    @content
+
+=desktop-HD
+  @media (min-width: #{$desktopHD-width})
+    @content
+
+=display-flex-direction($direction: row)
+  display: flex
+  flex-direction: $direction
+
+=justify-content($justify-content: flex-start)
+  @if $justify-content == start
+    $justify-content: flex-start
+  @else if $justify-content == end
+    $justify-content: flex-end
+  @else if $justify-content == between
+    $justify-content: space-between
+  @else if $justify-content == around
+    $justify-content: space-around
+
+  justify-content: $justify-content
+
+=align-items($align-items: flex-start)
+  @if $align-items == start
+    $align-items: flex-start
+  @else if $align-items == end
+    $align-items: flex-end
+
+  align-items: $align-items
+
+/*
+ * List of flex
+ */
+
+$flex-list: row column
+$justify-list: start center end around between
+$align-list: start center end
+
+@each $i in $flex-list
+  .flex-#{$i}
+    +display-flex-direction($i)
+
+@each $i in $justify-list
+  .justify-#{$i}
+    +justify-content($i)
+
+@each $i in $align-list
+  .align-#{$i}
+    +align-items($i)

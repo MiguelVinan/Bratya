@@ -1,0 +1,24 @@
+.link-effect
+  li
+    padding: 0.5em
+    overflow: hidden
+    a
+      transition: 0.3s ease
+      overflow: hidden
+      position: relative
+      left: -3%
+      text-transform: uppercase
+      &:hover
+        color: $color_beige
+        left: 0%
+        i
+          transform: translateX(0%)
+          visibility: visible
+          opacity: 1
+    i
+      transform: translateX(-200%)
+      transition: 0.3s ease
+      color: $color_beige
+      margin-right: 1em
+      visibility: hidden
+      opacity: 0

@@ -1,0 +1,102 @@
+.Services
+  background-image: url('../images/services.jpg')
+  background-size: cover
+  background-position: center center
+  position: relative
+  height: auto
+  &::before
+    content: ""
+    position: absolute
+    z-index: 0
+    background-image: linear-gradient(-180deg, #4A4A4A 0%, #2B2B2B 100%)
+    background-position: center center
+    background-size: cover
+    height: 100%
+    width: 100%
+    opacity: 0.8
+  .container
+    padding: $margin_space_bold 0
+    position: relative
+    z-index: 1
+
+  &-firstPart,
+  &-secondPart
+    width: 100%
+    h2
+      width: 500px
+      text-align: right
+    ul
+      padding-left: 1em
+      li
+        a
+          text-transform: none
+  &-list
+    background-color: rgba($color_black, 0.5)
+    margin-left: 1em
+    padding: 1em 1em
+    border-radius: 2px
+    box-sizing: border-box
+    width: 100%
+
+  &-firsPart
+    margin-top: $margin_space_bold
+
+  &-secondPart
+    margin-top: $margin_space_bold
+    h2
+      order: 1
+      text-align: left
+    ul
+      order: 0
+      text-align: right
+      margin-right: $margin_space_regular
+
+  &-note
+    width: 500px
+    margin: 0 auto
+    text-align: center
+    margin-top: $margin_space_bold
+    margin-bottom: $margin_space_bold
+
+  .ServicesDescription
+    box-sizing: border-box
+    padding: 3em
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    z-index: 10
+    background-color: white
+    &-times
+      cursor: pointer
+      transition: 0.3s ease
+      position: absolute
+      right: 10%
+      &:hover
+        color: $color_darkRed
+    .Meta-info
+      color: gray
+      font-style: italic
+      font-size: 12px
+      position: relative
+      top: 0
+      left: 0
+      strong
+        color: $color_darkRed
+      .fa
+        margin-right: 1em
+        color: $color_darkRed
+    div
+      width: 500px
+      margin: 0 auto
+      text-align: center
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &-title
+      text-align: center
+      margin: 0 auto
+    &-info
+      margin: $margin_space_regular auto 0

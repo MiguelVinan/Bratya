@@ -1,0 +1,134 @@
+footer
+  padding: $margin_space_bold 0
+  overflow: hidden
+  width: 100%
+  position: relative
+
+  .Copyright
+    position: absolute
+    bottom: 0
+    width: 100%
+    margin: 0 auto
+    box-sizing: border-box
+    padding: 1em 2em
+    span
+      color: gray
+      font-size: 12px
+
+
+
+  .Box
+    position: relative
+    box-sizing: border-box
+    padding: 2em
+    margin-left: 2em
+    margin-right: 2em
+    margin-top: 2em
+    border: 2px solid $color_gray
+    width: 100%
+    background-color: rgba(white, 0.7)
+    border-radius: 2px
+    &-cardContacts
+      p
+        margin-bottom: $margin_space_regular
+        font-weight: lighter
+        &:last-child
+          margin-bottom: 0
+
+    &-direction
+      div:first-child
+        margin-bottom: $margin_space_regular
+        font-weight: lighter
+      .Shared
+        .fa-twitter
+          color: #3CABDA
+        .fa-facebook
+          color: #1D6C92
+        a
+          transition: 0.3s ease
+          margin: 1em
+          &:hover
+            transform: scale(2)
+
+  .markWater-contact
+    color: $color_gray
+    position: absolute
+    z-index: 0
+    bottom: 0
+    letter-spacing: -50px
+  .Contact
+    position: relative
+    z-index: 1
+    &-card
+      text-align: center
+
+    &-form
+      [role="form"]
+        width: 100%
+      form
+        position: relative
+        width: 100%
+        input,
+        textarea
+          background-color: transparent
+          border: none
+          border-bottom: 2px solid $color_gray
+          color: $color_black
+          padding: 6px 15px
+          margin-bottom: 30px
+          font-size: 14px
+          transition: 0.3s ease
+          box-sizing: border-box
+          position: relative
+          width: 100%
+          border-radius: 2px
+
+          &:focus
+            outline: none
+            border-bottom: 2px solid $color_darkRed
+
+
+        textarea
+          border: 2px solid $color_gray
+          width: 100%
+          padding: 15px 15px
+          resize: none
+          margin-bottom: $margin_space_regular
+          &:focus
+            border: 2px solid $color_darkRed
+
+
+        input[type="submit"]
+          border: none
+          padding: 16px 40px
+          background: $color_darkRed
+          cursor: pointer
+          position: relative
+          bottom: 0
+          color: white
+          right: 0
+          width: auto
+          margin-bottom: 0
+          transition: 0.3s ease
+
+        .wpcf7-form-control.wpcf7-submit
+          &:hover
+            background-color: darken($color_darkRed, 15%)
+          &:focus
+            outline: none
+          &:active
+            transform: translateY(30%)
+
+        span[role="alert"]
+          color: $color_darkRed
+          font-size: 12px
+          margin-bottom: 10px
+          position: relative
+          bottom: 15px
+          width: 100%
+
+        .wpcf7-response-output
+          position: relative
+          color: $color_black
+          position: absolute
+          font-size: 12px

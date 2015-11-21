@@ -1,28 +1,85 @@
 .CoverIntro
-  height: 100vh
-  width: 100%
+  height: 800px
   background-color: $color_black
-  background-image: url("../images/suit2.jpg")
   background-size: cover
   background-position: center center
   position: relative
   top: 0
   left: 0
+  overflow: hidden
 
   &::before
     content: ""
     height: 100%
     width: 100%
-    opacity: 0.3
+    opacity: 1
     position: absolute
+    background-image: linear-gradient(270deg,rgba(0,0,0,0.09) 50%, #000000 100%)
     top: 0
     left: 0
+  &.row
+    margin-right: 0
+    margin-left: 0
+  &-content
+    position: relative
+    margin: auto
 
   .Header
-    position: absolute
-    left: 10%
-    top: 10%
-
+    text-align: left
     figure
+      margin-bottom: 3em
+      text-align: center
       img
-        width: 150px
+        width: 180px
+
+  .Description
+    text-align: right
+    h1
+      color: $color_black
+      margin-bottom: $margin_space_regular
+    p
+      width: 100%
+      position: relative
+      margin-bottom: $margin_space_regular
+
+
+.lineTop
+  height: 6px
+  width: 100%
+  background-image: url(../images/lineTop.jpg)
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+
+.markWater
+  position: absolute
+  text-transform: uppercase
+  color: rgba(white, 1)
+  font-size: 15em
+  &-first
+    left: 0
+    bottom: 0
+    transform: translateY(-60%)
+    opacity: 0.1
+    font-size: 13em
+    font-weight: lighter
+  &-last
+    left: 0
+    bottom: 0
+    opacity: 0.15
+    font-weight: bolder
+
++desktop
+  .CoverIntro
+    height: 100vh
+
+    .Header
+      figure
+        text-align: left
+        img
+          width: 200px
+
+    .Description
+      p
+        width: 400px
