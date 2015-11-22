@@ -45,7 +45,7 @@
   </div>
   <div class="container u-fullHeight">
     <div id="HandsText" class="Info-description u-fullHeight row bottom-xs">
-      <article class="col-xs-12 col-md-6">
+      <article class="col-xs-12 col-sm-6">
         <?php rewind_posts(); ?>
           <?php query_posts('post_per_page=1&p=47') ?>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -77,7 +77,7 @@
       <div class="Results-percentage">
         <span id="progress">0</span><span class="simbolPercentage">%</span>
       </div>
-      <article id="Results-info" class="Results-description col-md-offset-6 col-xs-12">
+      <article id="Results-info" class="Results-description col-sm-offset-4 col-md-offset-6 col-xs-12">
         <h2><?php the_title(); ?></h2>
         <p>
         <?php the_content(); ?>
