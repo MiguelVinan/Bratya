@@ -8,13 +8,25 @@
   .rightHand
     position: absolute
   .rightHand
-    bottom: 0
-    right: -200px
+    display: none
   .leftHand
     top: 0
     left: -200px
 
   &-description
-    margin-bottom: $margin_space_bold
-    h2
-      margin-bottom: $margin_space_regular
+    article
+      margin-bottom: $margin_space_bold
+      h2
+        margin-bottom: $margin_space_regular
+
++tablet
+  .Info
+    .rightHand
+      display: block
+      bottom: 13em
+      right: -200px
+
++desktop
+  .Info
+    .rightHand
+      bottom: 0

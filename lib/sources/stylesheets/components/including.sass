@@ -2,12 +2,14 @@
   padding-top: $margin_space_bold
   padding-bottom: $margin_space_bold
   position: relative
-  overflow: visible
-  height: 600px
+  overflow: hidden
+  height: auto
   h2
     position: relative
     z-index: 1
+    text-align: center
   .markWater
+    display: none
     &-including
       position: absolute
       z-index: 0
@@ -20,13 +22,28 @@
     margin-top: $margin_space_bold
     .Objetion
       text-align: center
+      margin-bottom: $margin_space_bold
+
       .square
         position: relative
         z-index: 1
-        height: 200px
-        width: 200px
+        height: 120px
+        width: 120px
         background-color: $color_darkRed
-        margin-bottom: $margin_space_regular
+        margin-bottom: 15px
         border-radius: 2px
         i
           color: white
+
++tablet
+  .Including
+    height: 600px
+    .markWater
+      display: block
+
+    &-objetions
+      .Objetion
+        .square
+          margin-bottom: $margin_space_regular
+          height: 200px
+          width: 200px

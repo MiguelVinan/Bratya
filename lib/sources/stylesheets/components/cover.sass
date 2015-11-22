@@ -1,5 +1,5 @@
 .CoverIntro
-  height: 800px
+  height: 900px
   background-color: $color_black
   background-size: cover
   background-position: center center
@@ -27,13 +27,13 @@
   .Header
     text-align: left
     figure
-      margin-bottom: 3em
+      margin-top: 2em
       text-align: center
       img
         width: 180px
 
   .Description
-    text-align: right
+    text-align: center
     h1
       color: $color_black
       margin-bottom: $margin_space_regular
@@ -41,7 +41,6 @@
       width: 100%
       position: relative
       margin-bottom: $margin_space_regular
-
 
 .lineTop
   height: 6px
@@ -70,13 +69,22 @@
     opacity: 0.15
     font-weight: bolder
 
++tablet
+  .CoverIntro
+    height: 100vh
+    .Description
+      text-align: right
+
+    .Header
+      figure
+        margin-bottom: 3em
+        text-align: left
+
 +desktop
   .CoverIntro
     height: 100vh
 
     .Header
-      figure
-        text-align: left
         img
           width: 200px
 

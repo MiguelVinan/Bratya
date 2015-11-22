@@ -1,26 +1,28 @@
 footer
-  padding: $margin_space_bold 0
+  padding: $margin_space_bold 0 $margin_space_regular
   overflow: hidden
   width: 100%
   position: relative
 
   .Copyright
-    position: absolute
-    bottom: 0
+    position: relative
     width: 100%
-    margin: 0 auto
+    margin: 3rem auto 0
     box-sizing: border-box
     padding: 1em 2em
     span
+      display: block
       color: gray
       font-size: 12px
+      a
+        font-size: 12px
 
 
 
   .Box
     position: relative
     box-sizing: border-box
-    padding: 2em
+    padding: 1em
     margin-left: 2em
     margin-right: 2em
     margin-top: 2em
@@ -29,6 +31,9 @@ footer
     background-color: rgba(white, 0.7)
     border-radius: 2px
     &-cardContacts
+      margin-bottom: 3rem
+      span
+        font-size: 12px
       p
         margin-bottom: $margin_space_regular
         font-weight: lighter
@@ -39,6 +44,9 @@ footer
       div:first-child
         margin-bottom: $margin_space_regular
         font-weight: lighter
+      span
+        font-size: 12px
+        margin-bottom: 5px
       .Shared
         .fa-twitter
           color: #3CABDA
@@ -61,10 +69,14 @@ footer
     z-index: 1
     &-card
       text-align: center
+      figure
+        img
+          width: 100%
 
     &-form
       [role="form"]
         width: 100%
+        margin-top: $margin_space_bold
       form
         position: relative
         width: 100%
@@ -77,6 +89,7 @@ footer
           padding: 6px 15px
           margin-bottom: 30px
           font-size: 14px
+          font-weight: lighter
           transition: 0.3s ease
           box-sizing: border-box
           position: relative
@@ -132,3 +145,22 @@ footer
           color: $color_black
           position: absolute
           font-size: 12px
+          display: block
+
++tablet
+  footer
+    .Contact
+      &-form
+        margin-top: 0
+    .Box
+      &-cardContacts
+        margin-bottom: 0
+
++desktop
+  footer
+    .Box
+      padding: 2em
+      &-cardContacts,
+      &-direction
+        span
+          font-size: 14px

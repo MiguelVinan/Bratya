@@ -18,15 +18,16 @@
     <span class="markWater markWater-first layer1">Bratya</span>
     <span class="markWater markWater-last layer2">Azanza</span>
   </div>
-  <article class="CoverIntro-content container row middle-md u-fullHeight">
+  <article class="CoverIntro-content container row middle-sm u-fullHeight">
 
-  	<header class="Header col-md-6 col-xs-12">
+  	<header class="Header col-sm-6 col-xs-12">
       <figure>
         <img src="<?= get_template_directory_uri().'/assets/images/brand.png' ?>" alt="">
       </figure>
+      <span class="btn-menu"><i class="fa fa-bars"></i></span>
       <?php include(locate_template('layouts/nav.php')); ?>
   	</header>
-    <article class="Description col-md-6 col-xs-12 flex-column align-end" style="color:<?php the_field('intro_description_color') ?>;">
+    <article class="Description col-sm-6 col-xs-12 flex-column align-end" style="color:<?php the_field('intro_description_color') ?>;">
       <h1><strong style="color:<?php the_field('intro_description_color')?>;"><?php the_field('primary_title') ?></strong></h1>
       <p>
         <?php the_field('intro_description') ?>
@@ -42,19 +43,21 @@
     <figure><img class="leftHand" src="<?= get_template_directory_uri().'/assets/images/leftHand.png' ?>" alt="" /></figure>
     <figure><img class="rightHand" src="<?= get_template_directory_uri().'/assets/images/rightHand.png' ?>" alt="" /></figure>
   </div>
-  <div class="container u-fullHeight flex-row align-end">
-    <article id="HandsText" class="Info-description row col-md-6">
-      <?php rewind_posts(); ?>
-        <?php query_posts('post_per_page=1&p=47') ?>
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <h2><?php the_title(); ?></h2>
-      <p>
-        <?php the_content(); ?>
-      </p>
-    <?php endwhile; else : ?>
-      <p><?php _e( 'No existe contenido, por favot ingresa desde el panel de administracion' ); ?></p>
-    <?php endif; ?>
-    </article>
+  <div class="container u-fullHeight">
+    <div id="HandsText" class="Info-description u-fullHeight row bottom-xs">
+      <article class="col-xs-12 col-md-6">
+        <?php rewind_posts(); ?>
+          <?php query_posts('post_per_page=1&p=47') ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <h2><?php the_title(); ?></h2>
+        <p>
+          <?php the_content(); ?>
+        </p>
+            <?php endwhile; else : ?>
+        <p><?php _e( 'No existe contenido, por favot ingresa desde el panel de administracion' ); ?></p>
+            <?php endif; ?>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -69,12 +72,12 @@
 <section class="Info Results" style="background-image:url( <?= $url ?> );">
 
   <span id="triggerProgress"></span>
-  <div class="container u-fullHeight flex-row align-end justify-end">
-    <div class="flex-column justify-center align-end">
+  <div class="container u-fullHeight row bottom-xs end-xs">
+    <div class="column">
       <div class="Results-percentage">
         <span id="progress">0</span><span class="simbolPercentage">%</span>
       </div>
-      <article id="Results-info" class="Results-description col-md-6">
+      <article id="Results-info" class="Results-description col-md-offset-6 col-xs-12">
         <h2><?php the_title(); ?></h2>
         <p>
         <?php the_content(); ?>
@@ -97,19 +100,19 @@
       <span class="markWater markWater-including"><?php the_title(); ?></span>
     </div>
     <article class="Including-objetions row">
-      <div class="Objetion Objetion-one col-md-3 flex-column justify-start align-center">
+      <div class="Objetion Objetion-one col-sm-3 col-xs-12 flex-column justify-start align-center">
         <div class="square flex-row justify-center align-center"><i class="fa fa-flask fa-4x"></i></div>
         <p><?php the_field('objetion_one') ?></p>
       </div>
-      <div class="Objetion Objetion-two col-md-3 flex-column justify-start align-center">
+      <div class="Objetion Objetion-two col-sm-3 col-xs-12 flex-column justify-start align-center">
         <div class="square flex-row justify-center align-center"><i class="fa fa-building fa-4x"></i></div>
         <p><?php the_field('objetion_two') ?></p>
       </div>
-      <div class="Objetion Objetion-three col-md-3 flex-column justify-start align-center">
+      <div class="Objetion Objetion-three col-sm-3 col-xs-12 flex-column justify-start align-center">
         <div class="square flex-row justify-center align-center"><i class="fa fa-male fa-4x"></i></div>
         <p><?php the_field('objetion_three') ?></p>
       </div>
-      <div class="Objetion Objetion-four col-md-3 flex-column justify-start align-center">
+      <div class="Objetion Objetion-four col-sm-3 col-xs-12 flex-column justify-start align-center">
         <div class="square flex-row justify-center align-center"><i class="fa fa-truck fa-4x"></i></div>
         <p><?php the_field('objetion_four') ?></p>
       </div>
@@ -120,17 +123,17 @@
   <?php endif; ?>
 </section>
 
-<section class="Info Services flex-row justify-center align-center">
+<section class="Info Services">
   <?php query_posts('post_per_page=1&p=97') ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <div class="container flex-column align-center">
-    <article class="Services-firstPart flex-row justify-center align-center">
-      <h2 class="u-textWhite"><?php the_field('our_services') ?></h2>
-      <ul class="link-effect Services-list">
+  <div class="container row">
+    <article class="Services-firstPart row col-xs-12">
+      <h2 class="u-textWhite col-xs-12 col-sm-4"><?php the_field('our_services') ?></h2>
+      <ul class="link-effect Services-list col-xs-12 col-sm-6">
         <?php
           if( have_rows('services_first_section') ):
               while ( have_rows('services_first_section') ) : the_row(); ?>
-                <li class="Services-item">
+                <li class="Services-item col-xs-12">
                   <a href="#"><i class="fa fa-long-arrow-right fa-fw"></i><?php the_sub_field('service_first_section') ?></a>
                   <article class="ServicesDescription is-hidden">
                     <!-- <span class="fa fa-times-circle fa-2x ServicesDescription-times"></span> -->
@@ -153,9 +156,9 @@
       </ul>
     </article>
 
-    <article class="Services-secondPart flex-row justify-center align-center">
-      <h2 class="u-textWhite">Ademas</h2>
-      <ul class="link-effect Services-list">
+    <article class="Services-secondPart row col-xs-12">
+      <h2 class="u-textWhite col-xs-12 col-sm-4">Ademas</h2>
+      <ul class="link-effect Services-list col-xs-12 col-sm-6">
         <?php
           if( have_rows('services_second_section') ):
               while ( have_rows('services_second_section') ) : the_row(); ?>
@@ -181,7 +184,7 @@
         ?>
       </ul>
     </article>
-    <p class="u-textWhite Services-note">
+    <p class="u-textWhite Services-note col-xs">
       Si nececitas mayor información sobre nuestros servicios individualmente, te invitamos que ingreses dando click en cualquier servicio de nuestra lista.
     </p>
   </div>
@@ -194,8 +197,8 @@
   <span id="triggerGetIn"></span>
   <?php query_posts('post_per_page=1&p=71') ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <div class="container row u-fullHeight align-end">
-    <div class="GetIn-info col-md-6 u-textWhite">
+  <div class="container row u-fullHeight bottom-xs">
+    <div class="GetIn-info col-sm-6 col-xs-12 u-textWhite">
       <h2><?php the_title(); ?></h2>
       <p><?php the_content(); ?></p>
     </div>
@@ -205,12 +208,12 @@
   <?php endif; ?>
 </section>
 
-<section id="triggerQuote" class="Quote flex-column justify-center align-center">
-  <aticle>
+<section id="triggerQuote" class="Quote row middle-xs center-xs">
+  <aticle class="row">
     <?php query_posts('post_per_page=1&p=75') ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <p class="lead u-textWhite">"<?php the_field('quote') ?>"</p>
-      <span class="u-textWhite">- <?php the_field('quote_author') ?></span>
+      <p class="lead u-textWhite col-xs-12">"<?php the_field('quote') ?>"</p>
+      <span class="u-textWhite col-xs-12">- <?php the_field('quote_author') ?></span>
     <?php endwhile; else : ?>
       <p><?php _e( 'Estamos escogiendo la mejor cita para compartir :)' ); ?></p>
     <?php endif; ?>

@@ -46,3 +46,18 @@
     transform: translateY(10%)
   &:focus
     outline: none
+
+.btn-menu
+  background-color: $color_darkRed
+  padding: 12px 15px
+  color: white
+  position: absolute
+  top: 1em
+  left: 1em
+  border-radius: 2px
+  visibility: visible
+
++tablet
+  .btn-menu
+    display: none
+    visibility: hidden

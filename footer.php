@@ -2,13 +2,13 @@
   <?php rewind_posts(); ?>
     <?php query_posts('post_per_page=1&category_name=formulario') ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <div class="Contact container flex-row justify-center align-center">
-    <article class="Contact-card col-md-6 flex-column justify-center align-center">
-      <figure>
+  <div class="Contact container row middle-xs center-xs">
+    <article class="Contact-card col-xs-12 col-sm-6 flex-column justify-center align-center">
+      <figure class="col-xs-12">
         <img src="<?= get_template_directory_uri().'/assets/images/Logotipo_black.png' ?>" alt="">
       </figure>
-      <article class="Box flex-row justify-around">
-        <div class="Box-cardContacts">
+      <article class="Box row justify-around">
+        <div class="Box-cardContacts col-xs-12 col-sm-6">
           <p class="flex-column align-start">
             <label class="u-uppercaseTransform">TELEFONO:</label>
             <?php
@@ -21,7 +21,7 @@
               endif;
             ?>
           </p>
-          <p class="flex-column align-start">
+          <p class="flex-column start-xs">
             <label class="u-uppercaseTransform">E-mail:</label>
             <?php
               if( have_rows('e-mails') ):
@@ -34,8 +34,8 @@
             ?>
           </p>
         </div>
-        <div class="Box-direction flex-column align-center">
-          <div class="flex-column align-start">
+        <div class="Box-direction col-xs-12 col-sm-6">
+          <div class="flex-column start-xs">
             <label class="u-uppercaseTransform">Dirección:</label>
             <?php
               if( have_rows('directions') ):
@@ -63,7 +63,7 @@
       </article>
     </article>
 
-    <div class="Contact-form col-md-6 flex-row justify-center align-center">
+    <div class="Contact-form col-xs-12 col-sm-6 flex-row justify-center align-center">
       <?php the_content(); ?>
     </div>
   </div>
@@ -74,9 +74,9 @@
   <div id="markWater-contact">
     <span class="markWater markWater-contact">Contactanos</span>
   </div>
-  <div class="Copyright flex-row justify-between">
-    <span>©Todos los derechos reservados, Bratya Azanza</span>
-    <span>Designed & Developed by <a href="//miguelvinan.com">@MiguelVinan</a></span>
+  <div class="Copyright row between-sm">
+    <span class="col-xs-12 col-sm-6 center-xs start-sm">©Todos los derechos reservados, Bratya Azanza</span>
+    <span class="col-xs-12 col-sm-6 center-xs end-sm">Designed & Developed by <a href="//miguelvinan.com">@MiguelVinan</a></span>
   </div>
 </footer>
 
