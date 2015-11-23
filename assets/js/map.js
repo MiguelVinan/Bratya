@@ -13,10 +13,78 @@
 *  @return	n/a
 */
 
+/*
+ * Colors
+ */
+
+ var $color_black   = "#23292C";
+ var $color_orange  = "#FF4948";
+ var $color_darkRed = "#D52940";
+ var $color_beige   = "#ECAF76";
+ var $color_gray    = "#CCCCCC";
+
 function new_map( $el ) {
 
 	// var
 	var $markers = $el.find('.marker');
+
+  //var
+  var stylesArray = [
+    {
+      featureType: "road.local",
+      elementType: "geometry.fill",
+      stylers:
+      [
+          { visibility: "on" },
+          {color: $color_beige}
+      ]
+    },
+    {
+      featureType: "landscape.natural",
+      elementType: "geometry.fill",
+      stylers:
+      [
+          { visibility: "on" },
+          {color: $color_black}
+      ]
+    },
+    {
+      featureType: "road.local",
+      elementType: "labels.text.fill",
+      stylers:
+      [
+          { visibility: "on" },
+          {color: '#FFFFFF'}
+      ]
+    },
+    {
+      featureType: "road.local",
+      elementType: "labels.text.stroke",
+      stylers:
+      [
+          { visibility: "on" },
+          {color: '#000000'}
+      ]
+    },
+    {
+      featureType: "poi",
+      elementType: "labels.text.fill",
+      stylers:
+      [
+          { visibility: "on" },
+          {color: '#FFFFFF'}
+      ]
+    },
+    {
+      featureType: "poi",
+      elementType: "labels.text.stroke",
+      stylers:
+      [
+          { visibility: "off" },
+          {color: '#000000'}
+      ]
+    }
+  ]
 
 
 	// vars
@@ -31,6 +99,11 @@ function new_map( $el ) {
 	// create map
 	var map = new google.maps.Map( $el[0], args);
 
+  var styledMap = new google.maps.StyledMapType(stylesArray,
+      {name: "Styled Map"}
+  );
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
 
 	// add a markers reference
 	map.markers = [];
