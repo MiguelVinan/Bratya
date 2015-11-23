@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="lineTop"></div>
+<div id="Top" class="lineTop"></div>
 <?php rewind_posts(); ?>
     <?php query_posts('post_per_page=1&p=31') ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -21,10 +21,6 @@
   <article class="CoverIntro-content container row middle-sm u-fullHeight">
 
   	<header class="Header col-sm-6 col-xs-12">
-      <figure>
-        <img src="<?= get_template_directory_uri().'/assets/images/brand.png' ?>" alt="">
-      </figure>
-      <span class="btn-menu"><i class="fa fa-bars"></i></span>
       <?php include(locate_template('layouts/nav.php')); ?>
   	</header>
     <article class="Description col-sm-6 col-xs-12 flex-column align-end" style="color:<?php the_field('intro_description_color') ?>;">
@@ -32,7 +28,7 @@
       <p>
         <?php the_field('intro_description') ?>
       </p>
-      <a href="#" class="btn-primary"><span><?php the_field('button_convertion') ?></span></a>
+      <a href="#Contact" class="btn-primary"><span><?php the_field('button_convertion') ?></span></a>
     </article>
 
   </article>
@@ -69,7 +65,7 @@
         $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'large' );
         $url = $thumb['0'];
       ?>
-<section class="Info Results" style="background-image:url( <?= $url ?> );">
+<section id="triggerBtnTop" class="Info Results" style="background-image:url( <?= $url ?> );">
 
   <span id="triggerProgress"></span>
   <div class="container u-fullHeight row bottom-xs end-xs">
@@ -123,7 +119,7 @@
   <?php endif; ?>
 </section>
 
-<section class="Info Services">
+<section id="Services" class="Info Services">
   <?php query_posts('post_per_page=1&p=97') ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <div class="container row">
@@ -184,7 +180,7 @@
         ?>
       </ul>
     </article>
-    <p class="u-textWhite Services-note col-xs">
+    <p class="u-textWhite Services-note col-xs-12 col-sm-5">
       Si nececitas mayor información sobre nuestros servicios individualmente, te invitamos que ingreses dando click en cualquier servicio de nuestra lista.
     </p>
   </div>

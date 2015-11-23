@@ -18,6 +18,17 @@
     wp_enqueue_script('jquery-v2','https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',"", "", true);
     wp_enqueue_script( 'animation', get_template_directory_uri() . '/assets/js/min/animation.js', array('jquery-v2'),'', true );
     wp_enqueue_script( 'appjs', get_template_directory_uri() . '/assets/js/min/app.js', array('animation'),'', true );
+    wp_register_script( 'api-maps','https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array('jquery-v2'),'', true );
+    wp_register_script( 'google-maps', get_template_directory_uri() . '/assets/js/map.js', array('jquery-v2'),'', true );
+    wp_register_script('home_script', get_template_directory_uri(). '/assets/js/home.js', array('appjs'),'', true);
+
+    if (is_home()) {
+      wp_enqueue_script('home_script');
+    }
+    else if (is_page(2)) {
+      wp_enqueue_script('api-maps');
+      wp_enqueue_script('google-maps');
+    }
   }
 
   add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
@@ -28,7 +39,8 @@
   function register_my_menus(){
     register_nav_menus(
       array(
-        'nav-header'=>__('Menu del Encabezado')
+        'nav-header'=>__('Menu del Encabezado'),
+        'nav-other' =>__('Menu de otras paginas')
       )
     );
   }

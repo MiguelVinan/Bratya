@@ -1,4 +1,5 @@
-<footer id="triggerContact">
+<footer id="Contact">
+  <a href="#Top" class="btn-top"><i class="fa fa-arrow-up fa-fw"></i></a>
   <?php rewind_posts(); ?>
     <?php query_posts('post_per_page=1&category_name=formulario') ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -75,8 +76,9 @@
     <span class="markWater markWater-contact">Contactanos</span>
   </div>
   <div class="Copyright row between-sm">
-    <span class="col-xs-12 col-sm-6 center-xs start-sm">©Todos los derechos reservados, Bratya Azanza</span>
     <span class="col-xs-12 col-sm-6 center-xs end-sm">Designed & Developed by <a href="//miguelvinan.com">@MiguelVinan</a></span>
+    <span class="col-xs-12 col-sm-6 center-xs start-sm">2015 ©Bratya Azanza, todos los derechos reservados.</span>
+
   </div>
 </footer>
 
