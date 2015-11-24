@@ -6,10 +6,6 @@
       $url = $thumb['0'];
     ?>
 <section class="CoverIntro" style="background-image:url( <?= $url ?> );">
-  <!-- <div id="">
-    <span class="markWater markWater-first layer1">Sobre</span>
-    <span class="markWater markWater-last layer2">Nosotros</span>
-  </div> -->
   <article class="CoverIntro-content container row middle-sm u-fullHeight">
 
   	<header class="Header col-sm-6 col-xs-12">

@@ -36,7 +36,7 @@ function new_map( $el ) {
       stylers:
       [
           { visibility: "on" },
-          {color: $color_beige}
+          {color: $color_orange}
       ]
     },
     {
