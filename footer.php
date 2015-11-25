@@ -78,7 +78,6 @@
   <div class="Copyright row between-sm">
     <span class="col-xs-12 col-sm-6 center-xs end-sm">Designed & Developed by <a href="//miguelvinan.com">@MiguelVinan</a></span>
     <span class="col-xs-12 col-sm-6 center-xs start-sm">2015 ©Bratya Azanza, todos los derechos reservados.</span>
-
   </div>
 </footer>
 

@@ -1,0 +1,36 @@
+.ContentPost
+  .share-links
+    margin-top: $margin_space_bold
+    a
+      border-radius: 3px
+      padding: 0.9em 0.9em
+      color: white
+    .facebook
+      padding: 0.9em 1em
+      background: $color_facebook
+      &:hover
+        background-color: darken($color_facebook, 10%)
+    .twitter
+      background-color: $color_twitter
+      &:hover
+        background-color: darken($color_twitter, 10%)
+    .googlePlus
+      background-color: $color_orange
+      &:hover
+        background-color: darken($color_orange, 10%)
+  &-content
+    margin: $margin_space_bold 0
+    text-align: left
+    p
+      line-height: 30px
+      color: $color_black
+      font-size: 18px
+
+  .Author
+    border: 1px solid $color_gray
+    border-radius: 1px
+    padding: 1em
+    background: $color_gray
+
+.Comments
+  background: $color_gray

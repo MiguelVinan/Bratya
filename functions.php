@@ -134,5 +134,5 @@ add_filter( 'login_headertitle', 'mi_logo_personalizado_url_titulo' );
 
    );
 
-   register_post_type('Blog', $args );
+   register_post_type('blog', $args );
  }
