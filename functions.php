@@ -80,7 +80,7 @@ add_theme_support( 'custom-background', $defaults );
 function mi_logo_personalizado() { ?>
     <style type="text/css">
         body.login div#login h1 a {
-      background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/my-logo.png);
+      background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Logotipo_black.png);
       background-size :170px;
       height          :300px;
       width           :170px;

@@ -24,3 +24,6 @@
     <?php wp_head(); ?>
   </head>
   <body>
+    <div class="loading">
+      <?php include(locate_template('layouts/preloader.php')); ?>
+    </div>
