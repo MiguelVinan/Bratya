@@ -4,6 +4,7 @@
   */
   function enqueue_styles(){
     // CSS
+    wp_enqueue_style( 'normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css');
     wp_enqueue_style( 'theme_styles',get_template_directory_uri() . '/assets/css/styles.css');
     wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css');
   }

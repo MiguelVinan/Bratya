@@ -31,7 +31,7 @@
   <?php $count=0; ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php
-    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'large' );
+    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'medium' );
     $url = $thumb['0'];
   ?>
 <?php $count++; ?>
@@ -69,7 +69,7 @@
   </section>
   <div class="Pagination col-xs-12 center-xs"><?= paginate_links() ?></div>
 <?php  else : ?>
-  <p><?php _e( 'Lo sentimos, no tenemos imagen por el momento :(' ); ?></p>
+  <p><?php _e( 'Lo sentimos, no tenemos articulos por el momento :(' ); ?></p>
 <?php endif; ?>
 <?php wp_reset_query(); ?>
 

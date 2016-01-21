@@ -27,3 +27,4 @@
     <div class="loading">
       <?php include(locate_template('layouts/preloader.php')); ?>
     </div>
+    
