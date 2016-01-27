@@ -7,7 +7,6 @@
     ?>
 <section class="CoverIntro" style="background-image:url( <?= $url ?> );">
   <article class="CoverIntro-content container row middle-sm u-fullHeight">
-
   	<header class="Header col-sm-6 col-xs-12">
       <?php include(locate_template('layouts/nav.php')); ?>
   	</header>
@@ -17,10 +16,8 @@
         <?php the_field('about_us_description') ?>
       </p>
     </article>
-
   </article>
 </section>
-
 <section class="AboutUs">
   <article class="AboutUs-whoAre container row middle-xs center-xs">
     <h2 class="col-xs-12 col-sm-10 center-xs"><?php the_field('about_us_quien'); ?></h2>
@@ -28,7 +25,6 @@
       <?php the_field('about_us_quien_description') ?>
     </p>
   </article>
-
   <article id="triggerBtnTop" class="AboutUs-visionAndMission row center-xs middle-xs">
     <div class="container row center-xs">
 
@@ -41,7 +37,6 @@
           </p>
         </article>
       </div>
-
       <div class="row col-xs-12 col-sm-5">
         <article class="row col-xs-12 center-xs">
           <h2 class="col-xs-12 center-xs"><?php the_field('our_mission'); ?></h2>
@@ -51,8 +46,6 @@
           </p>
         </article>
       </div>
-
-
     </div>
   </article>
 
@@ -71,7 +64,6 @@
               <h3><?php the_sub_field('cargo'); ?></h3>
               <p><?php the_sub_field('email_personal'); ?></p>
             </div>
-
     <?php
           endwhile;
       else : ?>
@@ -93,10 +85,6 @@
   </article>
 
 </section>
-
-
-
-
 <?php endwhile; else : ?>
   <p><?php _e( 'Lo sentimos, no tenemos imagen por el momento :(' ); ?></p>
 <?php endif; ?>

@@ -8,7 +8,6 @@
     ?>
 <section class="CoverIntro" style="background-image:url( <?= $url ?> );">
   <article class="CoverIntro-content container row middle-sm u-fullHeight">
-
   	<header class="Header col-sm-6 col-xs-12">
       <?php include(locate_template('layouts/nav.php')); ?>
   	</header>
@@ -18,7 +17,6 @@
         <?php the_content(); ?>
       </p>
     </article>
-
   </article>
 </section>
 
@@ -63,7 +61,6 @@
       <p class="Date"><?php the_time('F j, Y'); ?></p>
     </div>
   </article>
-
   <?php } ?>
 <?php endwhile; ?>
   </section>

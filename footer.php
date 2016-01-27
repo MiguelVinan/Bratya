@@ -53,17 +53,14 @@
             if( have_rows('media_channels') ):
                 while ( have_rows('media_channels') ) : the_row(); ?>
                     <a href="<?php the_sub_field('media_channel_url') ?>"><i class="fa fa-<?php the_sub_field('media_channel'); ?> fa-2x"></i></a>
-
                 <?php endwhile;
                   else :
             endif;
-
             ?>
           </div>
         </div>
       </article>
     </article>
-
     <div class="Contact-form col-xs-12 col-sm-6 flex-row justify-center align-center">
       <?php the_content(); ?>
     </div>
@@ -75,10 +72,8 @@
   <div id="markWater-contact">
     <span class="markWater markWater-contact">Contactanos</span>
   </div>
-
 <section class="ministeriosEcuador row center-xs">
   <div class="ministeriosEcuadorImagen col-xs-12">
-
   </div>
   <div class="ministeriosEcuadorData row col-sm-12">
     <!-- BLOQUE 1 -->
@@ -100,7 +95,6 @@
           </ul>
         </div>
       </div>
-
     <!-- Vicepresidencia -->
       <div class="entidad col-xs-12 col-sm-6">
         <a href="#" class="btn-ministerios s-visible">
@@ -142,7 +136,6 @@
           </ul>
         </div>
       </div>
-
     <!-- Secretarías -->
       <div class="entidad col-xs-12 col-sm-6">
         <a href="#" class="btn-ministerios s-visible">
@@ -163,7 +156,6 @@
         </div>
       </div>
     </div>
-
     <!-- bloque 3 -->
     <div class="col-xs-12 col-sm-6">
     <!-- Ministerios Coordinadores -->
@@ -188,7 +180,6 @@
         </div>
       </div>
     </div>
-
     <!-- BLOQUE 4 -->
     <div class="col-xs-12 col-sm-6">
       <div class="entidad">
@@ -206,16 +197,12 @@
                 else :
               endif;
               ?>
-
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-
   <div class="Copyright row between-sm">
     <span class="col-xs-12 col-sm-6 center-xs end-sm">Designed & Developed by <a href="//miguelvinan.com">@MiguelVinan</a></span>
     <span class="col-xs-12 col-sm-6 center-xs start-sm">2015 ©Bratya Azanza, todos los derechos reservados.</span>
