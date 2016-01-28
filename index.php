@@ -95,24 +95,31 @@
       <h2><?php the_title(); ?></h2>
       <span class="markWater markWater-including"><?php the_title(); ?></span>
     </div>
+
     <article class="Including-objetions row">
+
       <div class="Objetion Objetion-one col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-flask fa-4x"></i></div>
-        <p><?php the_field('objetion_one') ?></p>
+        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_uno') ?> fa-4x"></i></div>
+        <p><?php the_field('titulo_objeto_uno') ?></p>
       </div>
+
       <div class="Objetion Objetion-two col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-building fa-4x"></i></div>
-        <p><?php the_field('objetion_two') ?></p>
+        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_dos') ?>  fa-4x"></i></div>
+        <p><?php the_field('titulo_objeto_dos') ?></p>
       </div>
+
       <div class="Objetion Objetion-three col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-male fa-4x"></i></div>
-        <p><?php the_field('objetion_three') ?></p>
+        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_tres') ?>  fa-4x"></i></div>
+        <p><?php the_field('titulo_objeto_tres') ?></p>
       </div>
+
       <div class="Objetion Objetion-four col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-truck fa-4x"></i></div>
-        <p><?php the_field('objetion_four') ?></p>
+        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_cuatro') ?>  fa-4x"></i></div>
+        <p><?php the_field('titulo_objeto_cuatro') ?></p>
       </div>
+
     </article>
+
   </div>
   <?php endwhile; else : ?>
     <p><?php _e( 'Lo sentimos, no tenemos contenido por el momento :(' ); ?></p>
