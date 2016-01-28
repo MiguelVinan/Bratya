@@ -72,6 +72,10 @@
   <div id="markWater-contact">
     <span class="markWater markWater-contact">Contactanos</span>
   </div>
+
+ <?php rewind_posts(); ?>
+  <?php query_posts('p=198') ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <section class="ministeriosEcuador row center-xs">
   <div class="ministeriosEcuadorImagen col-xs-12">
   </div>
@@ -203,6 +207,10 @@
     </div>
   </div>
 </section>
+<?php endwhile; else : ?>
+  <p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un formulario de contacto por favor.' ); ?></p>
+<?php endif; ?>
+<?php wp_reset_query(); ?>
   <div class="Copyright row between-sm">
     <span class="col-xs-12 col-sm-6 center-xs end-sm">Designed & Developed by <a href="//miguelvinan.com">@MiguelVinan</a></span>
     <span class="col-xs-12 col-sm-6 center-xs start-sm">2015 ©Bratya Azanza, todos los derechos reservados.</span>
