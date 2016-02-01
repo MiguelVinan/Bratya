@@ -79,3 +79,34 @@
     background-color: $color_beige
   &:focus
     outline: none
+
+.leyes-boton
+  button
+    background: $color_primary
+    transition: 0.3s ease
+    color: white
+    padding: 0.3em 0.5em
+    border: none
+    border-radius: 3px
+
+    &:hover
+      opacity: 1 !important
+      background-color: $color_beige
+      &::before
+        width: 120%
+        height: 140%
+        opacity: 0
+        
+  input
+    text-align: center
+    padding: 0.3em 0.5em
+    border-radius: 3px
+    border: none
+    width: 100%
+    margin: 10px 0
+    &:hover
+      border: none
+      border-bottom: 2px solid red
+    &:focus
+      outline: none
+      border-bottom: 2px solid $color_darkRed

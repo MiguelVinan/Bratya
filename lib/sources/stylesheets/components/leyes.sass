@@ -1,0 +1,87 @@
+.leyes
+  margin: 80px 0
+  &-container
+    &-titulo
+    h1
+      font-size: 1.5em
+      padding: 40px 0
+
+    .leyes-buscar
+        margin: 15px 0
+        text-align: center
+
+    &-table
+    .estructura-data
+      .numero, .nombre,
+        font-size: 0.9em
+        border: 1px solid black
+        padding: 0.4em 2.9em
+      .registro, .documento
+        display: none
+
+    .ley-vigente
+      text-align: center
+      .estructura-encabezado
+        .estructura-numero
+          border: 1px solid black
+          a
+            color: rgb(83, 83, 83)
+        .estructura-titulo
+          border: 1px solid black
+          padding: 0.4em 0.2em
+          a
+            color: rgb(83, 83, 83)
+            font-size: 0.8em
+            .fa
+              color: red
+        .sumpl-tablet, .pdf-tsblet
+          display: none
+
+      .estructura-cuerpo
+        display: none
+        .estructura-registro
+          font-size: 0.9em
+          border: 1px solid black
+          padding: 0.4em 0.2em
+        .estructura-suple
+          border: 1px solid black
+          font-size: 0.8em
+          padding: 0.4em 0.2em
+
+      .estructura-pie
+        display: none
+        .estructura-documento
+          border: 1px solid black
+          font-size: 0.9em
+          padding: 0.4em 0.2em
+          border-bottom: 3px groove red
+        .estructura-pdf
+          border: 1px solid black
+          border-bottom: 3px groove red
+          padding: 0.4em 0.2em
+
++tablet
+  .leyes
+    &-container
+      &-table
+      .estructura-data
+        .registro, .documento
+          display: table-cell
+          font-size: 0.9em
+          border: 1px solid black
+          padding: 0.4em 2.9em
+
+      .ley-vigente
+        .estructura-encabezado
+          cursor: default
+          .estructura-numero, .estructura-titulo
+            pointer-events: none
+            .fa
+              display: none
+          .sumpl-tablet, .pdf-tsblet
+            display: table-cell
+            border: 1px solid black
+            padding: 0.4em 0.2em
+            font-size: 0.8em
+        .estructura-cuerpo, .estructura-pie
+          display: none
