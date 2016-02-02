@@ -208,7 +208,7 @@
   </div>
 </section>
 <?php endwhile; else : ?>
-  <p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un formulario de contacto por favor.' ); ?></p>
+  <p><?php _e( 'llena algún campo por favor. Para aparecer en esta sección' ); ?></p>
 <?php endif; ?>
 <?php wp_reset_query(); ?>
   <div class="Copyright row between-sm">
