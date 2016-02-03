@@ -18,78 +18,69 @@
 </article>
 </section>
 
-<section class="leyes ">
-  <div class="leyes-container container row col-xs-12">
+<section id="laws" class="leyes ">
+
+  <div class="leyes-container container row col-xs-12 center-xs col-md-12 center-md">
+
     <div class="leyes-titulo u-textCenter col-xs-12">
       <h1>LEYES APROBADAS</h1>
     </div>
 
-    <div class="leyes-buscar col-xs-12 .center-xs">
-      <form class="leyes-boton" action="index.html" >
-
-        <h3>Nombre de la ley</h3>
-        <input type="text" name="name" placeholder="ingrese el nombre de la ley" value="" class="col-sm-6">
-        <button type="submit" name="button">Buscar</button>
-      </form>
+    <div class="leyes-buscar col-xs-12 col-md-6">
+      <input class="search" placeholder="Ingrese el nombre de la ley." />
     </div>
+
 
     <table class="leyes-table">
       <thead class="estructura center-xs">
         <tr class="estructura-data">
-          <th class="numero">
+
+          <td class="numero">
             <h3>Nª</h3>
-          </th>
-          <th class="nombre">
+          </td>
+
+          <td class="nombre">
             <h3>Nombre de las Leyes</h3>
-          </th>
-          <th class="registro ">
+          </td>
+
+          <td class="registro ">
             <h3>Registro Oficial</h3>
-          </th>
-          <th class="documento ">
+          </td>
+
+          <td class="documento ">
             <h3>Documento</h3>
-          </th>
+          </td>
+
         </tr>
       </thead>
 
         <?php
-          if( have_rows('leyes') ):
-            while ( have_rows('leyes') ) : the_row(); ?>
-            <tbody class="ley-vigente">
-              <tr class="estructura-encabezado">
-                <th class="estructura-numero">
-                  <a class="boton" href=""><h3><?php the_sub_field('number') ?></h3></a>
-                </th>
-                <th class="estructura-titulo">
-                  <a  class="boton" ><h3><?php the_sub_field('law_name') ?></h3><i class="fa fa-arrow-down"></i></a>
-                </th>
-                <th class="sumpl-tablet">
-                  <h3><?php the_sub_field('registro_oficial') ?></h3>
-                </th>
-                <th class="pdf-tsblet">
-                  <a href="<?php the_sub_field('pdf_file') ?>" target="_blank"><h3>Ver <i class="fa fa-file-pdf-o"></i> </h3></a>
-                </th>
-              </tr>
+          if( have_rows('leyes') ): ?>
+            <tbody class="list ley-vigente">
+            <?php while ( have_rows('leyes') ) : the_row(); ?>
 
-              <tr class="estructura-cuerpo">
-                <td class="estructura-registro">
-                  <h3>Registro Oficial</h3>
-                </td>
-                <td class="estructura-suple">
-                  <h3 href=""><?php the_sub_field('registro_oficial') ?></h3>
-                </td>
-              </tr>
+              <tr class="estructura-encabezado ">
 
-              <tr class="estructura-pie">
-                <td class="estructura-documento">
-                  <h3>Documento</h3>
+                <td class="estructura-numero">
+                  <h3 class="num"><?php the_sub_field('number') ?></h3>
                 </td>
-                <td class="estructura-pdf">
+                <td class="estructura-titulo">
+                  <h3 class="name"><?php the_sub_field('law_name') ?></h3>
+                </td>
+
+                <td class="estructura-cuerpo">
+                  <h3 class="reg"><?php the_sub_field('registro_oficial') ?></h3>
+                </td>
+
+                <td class="estructura-pie">
                   <a href="<?php the_sub_field('pdf_file') ?>" target="_blank"><h3>Ver <i class="fa fa-file-pdf-o"></i></h3></a>
                 </td>
               </tr>
-            </tbody>
-          <?php endwhile;
-          else :
+
+
+          <?php endwhile;?>
+          </tbody>
+          <?php else :
           ?> <span>Espera, nos olvidamos de colocar un cliente.</span><?php
         endif;?>
     </table>
