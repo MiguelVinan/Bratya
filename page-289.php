@@ -35,7 +35,7 @@
         <tr class="estructura-data">
 
           <td class="numero">
-            <h3>Nª</h3>
+            <h3>Nº</h3>
           </td>
 
           <td class="nombre">
@@ -79,7 +79,7 @@
           <?php endwhile;?>
           </tbody>
           <?php else :
-          ?> <span>Espera, nos olvidamos de colocar un cliente.</span><?php
+          ?><?php
         endif;?>
     </table>
   </div>
