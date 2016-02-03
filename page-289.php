@@ -30,7 +30,6 @@
       <input class="search" placeholder="Ingrese el nombre de la ley." />
     </div>
 
-
     <table class="leyes-table">
       <thead class="estructura center-xs">
         <tr class="estructura-data">
@@ -76,7 +75,6 @@
                   <a href="<?php the_sub_field('pdf_file') ?>" target="_blank"><h3>Ver <i class="fa fa-file-pdf-o"></i></h3></a>
                 </td>
               </tr>
-
 
           <?php endwhile;?>
           </tbody>
