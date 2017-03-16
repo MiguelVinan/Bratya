@@ -87,45 +87,6 @@
   <?php endif; ?>
 <span  id="trigger3"></span>
 
-<section class="Info Including">
-  <?php query_posts('post_per_page=1&p=57') ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <div class="container">
-    <div class="Title">
-      <h2><?php the_title(); ?></h2>
-      <span class="markWater markWater-including"><?php the_title(); ?></span>
-    </div>
-
-    <article class="Including-objetions row">
-
-      <div class="Objetion Objetion-one col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_uno') ?> fa-4x"></i></div>
-        <p><?php the_field('titulo_objeto_uno') ?></p>
-      </div>
-
-      <div class="Objetion Objetion-two col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_dos') ?>  fa-4x"></i></div>
-        <p><?php the_field('titulo_objeto_dos') ?></p>
-      </div>
-
-      <div class="Objetion Objetion-three col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_tres') ?>  fa-4x"></i></div>
-        <p><?php the_field('titulo_objeto_tres') ?></p>
-      </div>
-
-      <div class="Objetion Objetion-four col-sm-3 col-xs-12 flex-column justify-start align-center">
-        <div class="square flex-row justify-center align-center"><i class="fa fa-<?= the_field('icono_objeto_cuatro') ?>  fa-4x"></i></div>
-        <p><?php the_field('titulo_objeto_cuatro') ?></p>
-      </div>
-
-    </article>
-
-  </div>
-  <?php endwhile; else : ?>
-    <p><?php _e( 'Lo sentimos, no tenemos contenido por el momento :(' ); ?></p>
-  <?php endif; ?>
-</section>
-
 <section id="Services" class="Info Services">
   <?php query_posts('post_per_page=1&p=97') ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -160,7 +121,7 @@
     </article>
 
     <article class="Services-secondPart row col-xs-12">
-      <h2 class="u-textWhite col-xs-12 col-sm-4">Ademas</h2>
+      <h2 class="u-textWhite col-xs-12 col-sm-4"></h2>
       <ul class="link-effect Services-list col-xs-12 col-sm-6">
         <?php
           if( have_rows('services_second_section') ):
@@ -209,18 +170,6 @@
   <?php endwhile; else : ?>
     <p><?php _e( 'Lo sentimos, no tenemos contenido por el momento :(' ); ?></p>
   <?php endif; ?>
-</section>
-
-<section id="triggerQuote" class="Quote row middle-xs center-xs">
-  <aticle class="row">
-    <?php query_posts('post_per_page=1&p=75') ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <p class="lead u-textWhite col-xs-12">"<?php the_field('quote') ?>"</p>
-      <span class="u-textWhite col-xs-12">- <?php the_field('quote_author') ?></span>
-    <?php endwhile; else : ?>
-      <p><?php _e( 'Estamos escogiendo la mejor cita para compartir :)' ); ?></p>
-    <?php endif; ?>
-  </aticle>
 </section>
 
 <?php get_footer(); ?>

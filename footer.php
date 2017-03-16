@@ -74,7 +74,7 @@
   </div>
 
  <?php rewind_posts(); ?>
-  <?php query_posts('p=198') ?>
+  <?php query_posts('p=461') ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <section class="ministeriosEcuador row center-xs">
   <div class="ministeriosEcuadorImagen col-xs-12">
