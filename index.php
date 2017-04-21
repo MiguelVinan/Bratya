@@ -91,14 +91,22 @@
   <?php query_posts('post_per_page=1&p=97') ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <div class="container row">
+
     <article class="Services-firstPart row col-xs-12">
-      <h2 class="u-textWhite col-xs-12 col-sm-4"><?php the_field('our_services') ?></h2>
-      <ul class="link-effect Services-list col-xs-12 col-sm-6">
         <?php
-          if( have_rows('services_first_section') ):
-              while ( have_rows('services_first_section') ) : the_row(); ?>
+          if( have_rows('all_services') ):
+              while ( have_rows('all_services') ) : the_row(); ?>
+
+              <h2 class="u-textWhite col-xs-12 col-sm-4"><?php echo the_sub_field('titulo_de_categoria') ?></h2>
+              <ul class="link-effect Services-list col-xs-12 col-sm-6">
+
+                <?php
+                  // Service
+                  if( have_rows('service') ):
+                      while ( have_rows('service') ) : the_row(); ?>
+
                 <li class="Services-item col-xs-12">
-                  <a href="#"><i class="fa fa-long-arrow-right fa-fw"></i><?php the_sub_field('service_first_section') ?></a>
+                  <a href="#"><i class="fa fa-long-arrow-right fa-fw"></i><?php echo the_sub_field('nombre_del_servicio') ?></a>
                   <article class="ServicesDescription is-hidden">
                     <!-- <span class="fa fa-times-circle fa-2x ServicesDescription-times"></span> -->
                     <div class="Meta-info flex-row align-center">
@@ -106,48 +114,27 @@
                       <span><strong>click</strong> en cualquier lugar de la pantalla para salir de esta vista.</span>
                     </div>
                     <div>
-                      <h2 class="ServicesDescription-title"><?php the_sub_field('service_first_section') ?></h2>
-                      <p class="ServicesDescription-info"><?php the_sub_field('service_first_description') ?></p>
+                      <h2 class="ServicesDescription-title"><?php the_sub_field('nombre_del_servicio') ?></h2>
+                      <p class="ServicesDescription-info"><?php the_sub_field('descripcion_del_servicio') ?></p>
                     </div>
                   </article>
                 </li>
+
+                <?php
+                      endwhile;
+                  endif;
+                  // End Service
+                ?>
+              </ul>
+
         <?php
               endwhile;
           else : ?>
             <span style="color:white;">No existen servicios por el momento, agrega uno desde el panel de administración</span>
           <?php endif;
         ?>
-      </ul>
     </article>
 
-    <article class="Services-secondPart row col-xs-12">
-      <h2 class="u-textWhite col-xs-12 col-sm-4"></h2>
-      <ul class="link-effect Services-list col-xs-12 col-sm-6">
-        <?php
-          if( have_rows('services_second_section') ):
-              while ( have_rows('services_second_section') ) : the_row(); ?>
-                <li class="Services-item">
-                  <a href="#"><i class="fa fa-long-arrow-right fa-fw"></i><?php the_sub_field('service') ?></a>
-                  <article class="ServicesDescription is-hidden">
-                    <!-- <span class="fa fa-times-circle fa-2x ServicesDescription-times"></span> -->
-                    <div class="Meta-info flex-row align-center">
-                      <span class="fa fa-info-circle fa-2x"></span>
-                      <span><strong>click</strong> en cualquier lugar de la pantalla para salir de esta vista.</span>
-                    </div>
-                    <div>
-                      <h2 class="ServicesDescription-title"><?php the_sub_field('service') ?></h2>
-                      <p class="ServicesDescription-info"><?php the_sub_field('service_description') ?></p>
-                    </div>
-                  </article>
-                </li>
-        <?php
-              endwhile;
-          else : ?>
-            <span style="color:white;">No existen servicios por el momento, agrega uno desde el panel de administración</span>
-          <?php endif;
-        ?>
-      </ul>
-    </article>
     <p class="u-textWhite Services-note col-xs-12 col-sm-5">
       Si nececitas mayor información sobre nuestros servicios individualmente, te invitamos que ingreses dando click en cualquier servicio de nuestra lista.
     </p>
