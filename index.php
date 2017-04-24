@@ -96,36 +96,37 @@
         <?php
           if( have_rows('all_services') ):
               while ( have_rows('all_services') ) : the_row(); ?>
+              <div class="row Services-row">
+                <h4 class="u-textWhite col-xs-12 col-sm-4" style="text-align: right;"><?php echo the_sub_field('titulo_de_categoria') ?></h4>
+                <ul class="link-effect Services-list col-xs-12 col-sm-8">
 
-              <h2 class="u-textWhite col-xs-12 col-sm-4"><?php echo the_sub_field('titulo_de_categoria') ?></h2>
-              <ul class="link-effect Services-list col-xs-12 col-sm-6">
+                  <?php
+                    // Service
+                    if( have_rows('service') ):
+                        while ( have_rows('service') ) : the_row(); ?>
 
-                <?php
-                  // Service
-                  if( have_rows('service') ):
-                      while ( have_rows('service') ) : the_row(); ?>
+                  <li class="Services-item col-xs-12">
+                    <a href="#"><i class="fa fa-long-arrow-right fa-fw"></i><?php echo the_sub_field('nombre_del_servicio') ?></a>
+                    <article class="ServicesDescription is-hidden">
+                      <!-- <span class="fa fa-times-circle fa-2x ServicesDescription-times"></span> -->
+                      <div class="Meta-info flex-row align-center">
+                        <span class="fa fa-info-circle fa-2x"></span>
+                        <span><strong>click</strong> en cualquier lugar de la pantalla para salir de esta vista.</span>
+                      </div>
+                      <div>
+                        <h3 class="ServicesDescription-title"><?php the_sub_field('nombre_del_servicio') ?></h3>
+                        <p class="ServicesDescription-info"><?php the_sub_field('descripcion_del_servicio') ?></p>
+                      </div>
+                    </article>
+                  </li>
 
-                <li class="Services-item col-xs-12">
-                  <a href="#"><i class="fa fa-long-arrow-right fa-fw"></i><?php echo the_sub_field('nombre_del_servicio') ?></a>
-                  <article class="ServicesDescription is-hidden">
-                    <!-- <span class="fa fa-times-circle fa-2x ServicesDescription-times"></span> -->
-                    <div class="Meta-info flex-row align-center">
-                      <span class="fa fa-info-circle fa-2x"></span>
-                      <span><strong>click</strong> en cualquier lugar de la pantalla para salir de esta vista.</span>
-                    </div>
-                    <div>
-                      <h2 class="ServicesDescription-title"><?php the_sub_field('nombre_del_servicio') ?></h2>
-                      <p class="ServicesDescription-info"><?php the_sub_field('descripcion_del_servicio') ?></p>
-                    </div>
-                  </article>
-                </li>
-
-                <?php
-                      endwhile;
-                  endif;
-                  // End Service
-                ?>
-              </ul>
+                  <?php
+                        endwhile;
+                    endif;
+                    // End Service
+                  ?>
+                </ul>
+              </div>
 
         <?php
               endwhile;
@@ -136,7 +137,7 @@
     </article>
 
     <p class="u-textWhite Services-note col-xs-12 col-sm-5">
-      Si nececitas mayor información sobre nuestros servicios individualmente, te invitamos que ingreses dando click en cualquier servicio de nuestra lista.
+      Si necesitas mayor información sobre nuestros servicios individualmente, te invitamos que ingreses dando click en cualquier servicio de nuestra lista.
     </p>
   </div>
   <?php endwhile; else : ?>
